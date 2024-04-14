@@ -1,7 +1,9 @@
 package bibilioteca.main;
 
+import bibilioteca.dominio.Alumno;
 import bibilioteca.dominio.Libro;
 import bibilioteca.dominio.Prestamo;
+import bibilioteca.dominio.Profesor;
 import bibilioteca.dominio.Usuario;
 
 public class Main {
@@ -14,10 +16,14 @@ public class Main {
          * System.out.println(PozoAscension.toString());
          */
 
-        Usuario Juan = new Usuario("Juan", "12345678A", "123 45 67 89");
-        /* System.out.println(Juan.toString()); */
+        Usuario Juan = new Alumno("Juan", "12345678A", "123 45 67 89");
+        System.out.println(Juan.toString());
+
+        Usuario Xisco = new Profesor("Xisco", "87654321Z", "987 65 43 21");
+        System.out.println(Xisco.toString());
 
         Juan.prestarLibro(ImperioFinal);
+        Juan.prestarLibro(PozoAscension);
         System.out.println(Juan.getLibros());
 
         Prestamo P1 = new Prestamo(ImperioFinal, Juan, "14/04/2024", "14/05/2024");
