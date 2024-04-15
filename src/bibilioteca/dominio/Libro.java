@@ -1,6 +1,6 @@
 package bibilioteca.dominio;
 
-public class Libro {
+public class Libro implements Prestable {
     private final String titulo;
     private final String autor;
     private final String genero;
@@ -35,11 +35,13 @@ public class Libro {
         return estado_prestamo;
     }
 
-    public void prestarLibro() {
+    @Override
+    public void prestar() {
         this.estado_prestamo = true;
     }
 
-    public void devolverLibro() {
+    @Override
+    public void devolver() {
         this.estado_prestamo = false;
     }
 

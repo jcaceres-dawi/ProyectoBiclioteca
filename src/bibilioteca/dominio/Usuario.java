@@ -40,12 +40,12 @@ public class Usuario {
 
     public void prestarLibro(Libro libro){
         libros.add(libro);
-        libro.prestarLibro();
+        libro.prestar();
     }
 
     public void devolverLibro(Libro libro){
         libros.remove(libro);
-        libro.devolverLibro();
+        libro.devolver();
     }
 
     @Override
