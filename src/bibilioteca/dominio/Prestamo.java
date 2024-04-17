@@ -1,5 +1,7 @@
 package bibilioteca.dominio;
 
+import java.io.*;
+
 public class Prestamo {
     private final Libro libro;
     private final Usuario usuario;
@@ -31,6 +33,25 @@ public class Prestamo {
 
     public void actualizarFinal_prestamo(String final_prestamo) {
         this.final_prestamo = final_prestamo;
+    }
+
+    public void regitrar_prestamo() {
+        FileWriter fichero = null;
+        PrintWriter pw = null;
+        try {
+            fichero = new FileWriter("registro.txt", true);
+            pw = new PrintWriter(fichero);
+            pw.println(toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (null != fichero)
+                    fichero.close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
     }
 
     @Override

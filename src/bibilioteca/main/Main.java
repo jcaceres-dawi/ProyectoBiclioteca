@@ -33,5 +33,9 @@ public class Main {
         System.out.println(P1.getFinal_prestamo());
 
         System.out.println(P1.toString());
+        P1.regitrar_prestamo();
+
+        Prestamo P2 = new Prestamo(PozoAscension, Juan, "17/04/2024", "17/05/2024");
+        P2.regitrar_prestamo();
     }
 }
