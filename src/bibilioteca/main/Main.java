@@ -1,6 +1,7 @@
 package bibilioteca.main;
 
 import bibilioteca.dominio.Alumno;
+import bibilioteca.dominio.Genero;
 import bibilioteca.dominio.Libro;
 import bibilioteca.dominio.Prestamo;
 import bibilioteca.dominio.Profesor;
@@ -8,8 +9,8 @@ import bibilioteca.dominio.Revista;
 
 public class Main {
     public static void main(String[] args) {
-        Libro ImperioFinal = new Libro("El Imperio Final", "Brandon Sanderson", "Fantasía", 2006);
-        Libro PozoAscension = new Libro("EL Pozo De La Ascensión ", "Brandon Sanderson", "Fantasía", 2007);
+        Libro ImperioFinal = new Libro("El Imperio Final", "Brandon Sanderson", Genero.FANTASIA, 2006);
+        Libro PozoAscension = new Libro("EL Pozo De La Ascensión ", "Brandon Sanderson", Genero.FANTASIA, 2007);
         Revista RoolingStone = new Revista("Rolling Stone", 2024);
 
         /*
@@ -35,9 +36,9 @@ public class Main {
         System.out.println(P1.getFinal_prestamo());
 
         System.out.println(P1.toString());
-        /* P1.regitrar_prestamo();
+        P1.regitrar_prestamo();
 
         Prestamo P2 = new Prestamo(PozoAscension, Juan, "17/04/2024", "17/05/2024");
-        P2.regitrar_prestamo(); */
+        P2.regitrar_prestamo();
     }
 }
