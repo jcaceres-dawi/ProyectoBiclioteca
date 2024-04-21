@@ -3,19 +3,17 @@ package bibilioteca.dominio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+public abstract class Usuario {
     private final String nombre;
     private final String dni;
     private final String telefono;
     private final List<Libro> libros;
-    public final int membresia;
 
-    public Usuario(String nombre, String dni, String telefono, int membresia) {
+    public Usuario(String nombre, String dni, String telefono) {
         this.nombre = nombre;
         this.dni = dni;
         this.telefono = telefono;
         this.libros = new ArrayList<>();
-        this.membresia = membresia;
     }
 
     public String getNombre() {
@@ -26,17 +24,15 @@ public class Usuario {
         return dni;
     }
 
-    public List<Libro> getLibros() {
-        return libros;
-    }
-
     public String getTelefono() {
         return telefono;
     }
 
-    public int getMembresia(){
-        return membresia;
+    public List<Libro> getLibros() {
+        return libros;
     }
+
+    public abstract int getMembresia();
 
     public void prestarLibro(Libro libro){
         libros.add(libro);
@@ -46,15 +42,5 @@ public class Usuario {
     public void devolverLibro(Libro libro){
         libros.remove(libro);
         libro.devolver();
-    }
-
-    @Override
-    public String toString() {
-        String usuario = "Información de usuario:\n";
-        usuario += "- Nombre: " + getNombre() + "\n";
-        usuario += "- Dni: " + getDni() + "\n";
-        usuario += "- Teléfono: " + getTelefono() + "\n";
-        usuario += "- Membresia: " + getMembresia() + "\n";
-        return usuario;
     }
 }
