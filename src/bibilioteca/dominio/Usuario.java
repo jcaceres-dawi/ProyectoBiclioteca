@@ -43,4 +43,14 @@ public abstract class Usuario {
         libros.remove(libro);
         libro.devolver();
     }
+
+    @Override
+    public String toString() {
+        String usuario = "Información de usuario:\n";
+        usuario += "- Nombre: " + getNombre() + "\n";
+        usuario += "- Dni: " + getDni() + "\n";
+        usuario += "- Teléfono: " + getTelefono() + "\n";
+        usuario += "- Membresia: " + getMembresia() + "\n";
+        return usuario;
+    }
 }
