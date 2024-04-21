@@ -1,6 +1,6 @@
 package bibilioteca.dominio;
 
-public class Libro implements Prestable {
+public class Libro implements Articulo {
     private final String titulo;
     private final String autor;
     private final String genero;
