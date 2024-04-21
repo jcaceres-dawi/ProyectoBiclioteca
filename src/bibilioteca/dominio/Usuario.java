@@ -7,13 +7,13 @@ public abstract class Usuario {
     private final String nombre;
     private final String dni;
     private final String telefono;
-    private final List<Libro> libros;
+    private final List<Articulo> articulos;
 
     public Usuario(String nombre, String dni, String telefono) {
         this.nombre = nombre;
         this.dni = dni;
         this.telefono = telefono;
-        this.libros = new ArrayList<>();
+        this.articulos = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -28,20 +28,20 @@ public abstract class Usuario {
         return telefono;
     }
 
-    public List<Libro> getLibros() {
-        return libros;
+    public List<Articulo> getArticulos() {
+        return articulos;
     }
 
     public abstract int getMembresia();
 
-    public void prestarLibro(Libro libro){
-        libros.add(libro);
-        libro.prestar();
+    public void prestarArticulo(Articulo articulo){
+        articulos.add(articulo);
+        articulo.prestar();
     }
 
-    public void devolverLibro(Libro libro){
-        libros.remove(libro);
-        libro.devolver();
+    public void devolverArticulo(Articulo articulo){
+        articulos.remove(articulo);
+        articulo.devolver();
     }
 
     @Override
