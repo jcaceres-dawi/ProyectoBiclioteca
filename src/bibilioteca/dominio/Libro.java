@@ -3,11 +3,11 @@ package bibilioteca.dominio;
 public class Libro implements Articulo {
     private final String titulo;
     private final String autor;
-    private final String genero;
+    private final Genero genero;
     private final int año_publicacion;
     private boolean estado_prestamo;
 
-    public Libro(String titulo, String autor, String genero, int año_publicacion) {
+    public Libro(String titulo, String autor, Genero genero, int año_publicacion) {
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
@@ -23,7 +23,7 @@ public class Libro implements Articulo {
         return autor;
     }
 
-    public String getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
