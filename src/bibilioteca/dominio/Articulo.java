@@ -1,6 +1,6 @@
 package bibilioteca.dominio;
 
-public interface Prestable {
+public interface Articulo {
 
     void prestar();
 
