@@ -3,20 +3,20 @@ package bibilioteca.dominio;
 import java.io.*;
 
 public class Prestamo {
-    private final Libro libro;
+    private final Articulo articulo;
     private final Usuario usuario;
     private final String inicio_prestamo;
     private String final_prestamo;
 
-    public Prestamo(Libro libro, Usuario usuario, String inicio_prestamo, String final_prestamo) {
-        this.libro = libro;
+    public Prestamo(Articulo articulo, Usuario usuario, String inicio_prestamo, String final_prestamo) {
+        this.articulo = articulo;
         this.usuario = usuario;
         this.inicio_prestamo = inicio_prestamo;
         this.final_prestamo = final_prestamo;
     }
 
-    public String getLibro() {
-        return libro.getTitulo();
+    public String getArticulo() {
+        return articulo.getTitulo();
     }
 
     public String getUsuario() {
@@ -57,7 +57,7 @@ public class Prestamo {
     @Override
     public String toString() {
         String prestamo = "Información del prestamo:\n";
-        prestamo += "- Libro: " + getLibro() + "\n";
+        prestamo += "- Articulo: " + getArticulo() + "\n";
         prestamo += "- Usuario: " + getUsuario() + "\n";
         prestamo += "- Inicio: " + getInicio_prestamo() + "\n";
         prestamo += "- Final: " + getFinal_prestamo() + "\n";
