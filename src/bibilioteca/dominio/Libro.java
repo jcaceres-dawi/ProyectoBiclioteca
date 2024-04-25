@@ -1,22 +1,13 @@
 package bibilioteca.dominio;
 
-public class Libro implements Articulo {
-    private final String titulo;
+public class Libro extends Articulo {
     private final String autor;
     private final Genero genero;
-    private final int año_publicacion;
-    private boolean estado_prestamo;
 
     public Libro(String titulo, String autor, Genero genero, int año_publicacion) {
-        this.titulo = titulo;
+        super(titulo, año_publicacion, false);
         this.autor = autor;
         this.genero = genero;
-        this.año_publicacion = año_publicacion;
-        this.estado_prestamo = false;
-    }
-
-    public String getTitulo() {
-        return titulo;
     }
 
     public String getAutor() {
@@ -25,24 +16,6 @@ public class Libro implements Articulo {
 
     public Genero getGenero() {
         return genero;
-    }
-
-    public int getAño_publicacion() {
-        return año_publicacion;
-    }
-
-    public boolean estaPrestado() {
-        return estado_prestamo;
-    }
-
-    @Override
-    public void prestar() {
-        this.estado_prestamo = true;
-    }
-
-    @Override
-    public void devolver() {
-        this.estado_prestamo = false;
     }
 
     @Override
