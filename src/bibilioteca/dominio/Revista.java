@@ -1,36 +1,9 @@
 package bibilioteca.dominio;
 
-public class Revista implements Articulo {
-    private final String titulo;
-    private final int año_publicacion;
-    private boolean estado_prestamo;
+public class Revista extends Articulo {
 
     public Revista(String titulo, int año_publicacion) {
-        this.titulo = titulo;
-        this.año_publicacion = año_publicacion;
-        this.estado_prestamo = false;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public int getAño_publicacion() {
-        return año_publicacion;
-    }
-
-    public boolean estaPrestado() {
-        return estado_prestamo;
-    }
-
-    @Override
-    public void prestar() {
-        this.estado_prestamo = true;
-    }
-
-    @Override
-    public void devolver() {
-        this.estado_prestamo = false;
+        super(titulo, año_publicacion, false);
     }
 
     @Override
