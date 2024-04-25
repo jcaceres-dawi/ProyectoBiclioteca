@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Libro ImperioFinal = new Libro("El Imperio Final", "Brandon Sanderson", Genero.FANTASIA, 2006);
         Libro PozoAscension = new Libro("EL Pozo De La Ascensión ", "Brandon Sanderson", Genero.FANTASIA, 2007);
-        Revista RoolingStone = new Revista("Rolling Stone", 2024);
+        Revista RollingStone = new Revista("Rolling Stone", 2024);
 
         /*
          * System.out.println(ImperioFinal.toString());
@@ -26,7 +26,7 @@ public class Main {
 
         Juan.prestarArticulo(ImperioFinal);
         Juan.prestarArticulo(PozoAscension);
-        Juan.prestarArticulo(RoolingStone);
+        Juan.prestarArticulo(RollingStone);
         System.out.println(Juan.getArticulos());
 
         Prestamo P1 = new Prestamo(ImperioFinal, Juan, "14/04/2024", "14/05/2024");
@@ -40,5 +40,8 @@ public class Main {
 
         Prestamo P2 = new Prestamo(PozoAscension, Juan, "17/04/2024", "17/05/2024");
         P2.regitrar_prestamo();
+
+        Prestamo P3 = new Prestamo(RollingStone, Xisco, "21/04/2024", "21/05/2024");
+        P3.regitrar_prestamo();
     }
 }
