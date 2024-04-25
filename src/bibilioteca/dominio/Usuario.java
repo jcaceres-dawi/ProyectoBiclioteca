@@ -39,7 +39,7 @@ public abstract class Usuario {
         articulo.prestar();
     }
 
-    public void devolverArticulo(Articulo articulo){
+    public void devolverArticulo(Prestable articulo){
         articulos.remove(articulo);
         articulo.devolver();
     }
