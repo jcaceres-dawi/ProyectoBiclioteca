@@ -10,5 +10,12 @@ public enum Genero {
     POESIA,
     ENSAYO,
     HISTORIA,
-    OTRO
+    OTRO;
+
+    public static void imprimirGeneros() {
+        System.out.println("Géneros disponibles:");
+        for (Genero genero : Genero.values()) {
+            System.out.println((genero.ordinal() + 1) + ". " + genero.name());
+        }
+    }
 }
